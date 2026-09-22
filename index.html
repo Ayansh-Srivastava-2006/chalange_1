@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find products closest to your target price.">
+  <title>Price Finder | eCart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="." aria-label="eCart home"><span class="brand-mark">e</span>cart</a>
+      <span class="status-pill"><span class="status-dot"></span>Smart shopping, made simple</span>
+    </header>
+
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Price intelligence</p>
+        <h1>Find the right product at the right price.</h1>
+        <p class="lede">Set your budget and we will surface the closest matches from our catalog.</p>
+      </div>
+      <div class="hero-stat" aria-label="catalog size"><strong id="catalog-count">12</strong><span>products<br>indexed</span></div>
+    </section>
+
+    <section class="finder-panel" aria-labelledby="finder-title">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">01 / Target search</p>
+          <h2 id="finder-title">Find products around your price</h2>
+        </div>
+        <span class="method-note">Sorted search</span>
+      </div>
+      <form id="finder-form" class="target-form">
+        <label class="price-field">
+          <span>Target price</span>
+          <div class="input-wrap"><span aria-hidden="true">₹</span><input id="target-price" type="number" min="1" step="1" value="70000" inputmode="numeric" required></div>
+        </label>
+        <button class="primary-button" type="submit">Search <span aria-hidden="true">↗</span></button>
+      </form>
+      <div class="range-divider"><span>or search a price range</span></div>
+      <form id="range-form" class="range-form">
+        <label><span>Minimum</span><input id="min-price" type="number" min="1" value="50000" inputmode="numeric" required></label>
+        <span class="range-dash" aria-hidden="true">—</span>
+        <label><span>Maximum</span><input id="max-price" type="number" min="1" value="80000" inputmode="numeric" required></label>
+        <button class="secondary-button" type="submit">Find in this range</button>
+      </form>
+      <p id="form-message" class="form-message" role="status"></p>
+    </section>
+
+    <section class="results-section" aria-labelledby="results-title">
+      <div class="results-heading">
+        <div><p class="eyebrow">02 / Your matches</p><h2 id="results-title">Closest products</h2></div>
+        <span id="results-meta" class="results-meta"></span>
+      </div>
+      <div id="product-grid" class="product-grid" aria-live="polite"></div>
+    </section>
+  </main>
+  <script src="../data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
