@@ -51,31 +51,6 @@
       <p id="form-message" class="form-message" role="status"></p>
     </section>
 
-    <section class="analytics-panel" aria-labelledby="analytics-title">
-      <div class="panel-heading">
-        <div>
-          <p class="eyebrow">02 / Inventory intelligence</p>
-          <h2 id="analytics-title">Measure inventory in a price range</h2>
-        </div>
-        <span class="method-note">Prefix totals</span>
-      </div>
-      <form id="analytics-form" class="range-form analytics-form">
-        <label><span>Minimum price</span><input id="analytics-min" type="number" min="1" value="5000" inputmode="numeric" required></label>
-        <span class="range-dash" aria-hidden="true">—</span>
-        <label><span>Maximum price</span><input id="analytics-max" type="number" min="1" value="20000" inputmode="numeric" required></label>
-        <button class="secondary-button" type="submit">Analyze inventory</button>
-      </form>
-      <p id="analytics-message" class="form-message" role="status"></p>
-      <div class="summary-grid" aria-live="polite">
-        <article class="summary-card"><span>Matching products</span><strong id="inventory-count">0</strong></article>
-        <article class="summary-card summary-card-accent"><span>Total inventory value</span><strong id="inventory-value">₹0</strong></article>
-      </div>
-      <div class="inventory-list-wrap">
-        <div class="list-heading"><h3>Matching product list</h3><span id="inventory-meta"></span></div>
-        <div id="inventory-list" class="inventory-list"></div>
-      </div>
-    </section>
-
     <section class="results-section" aria-labelledby="results-title">
       <div class="results-heading">
         <div><p class="eyebrow">03 / Your matches</p><h2 id="results-title">Closest products</h2></div>
