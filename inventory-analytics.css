@@ -1,0 +1,22 @@
+.analytics-panel { margin-top: 18px; padding: 30px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255, 255, 255, .82); box-shadow: var(--shadow); }
+.analytics-form { margin-top: 30px; }
+.summary-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 8px; }
+.summary-card { padding: 19px 20px; border: 1px solid var(--line); border-radius: 7px; background: var(--paper); }
+.summary-card span { display: block; color: var(--muted); font-size: 12px; font-weight: 600; }
+.summary-card strong { display: block; margin-top: 8px; font: 700 28px 'Space Grotesk', sans-serif; letter-spacing: -1px; }
+.summary-card-accent { background: var(--mint); border-color: transparent; }
+.inventory-list-wrap { margin-top: 25px; }
+.list-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; }
+.list-heading h3 { margin: 0; font: 600 17px 'Space Grotesk', sans-serif; }
+.list-heading span { color: var(--muted); font-size: 12px; }
+.inventory-list { margin-top: 10px; border-top: 1px solid var(--line); }
+.inventory-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+.inventory-row span { min-width: 0; }
+.inventory-row strong { font-size: 14px; }
+.inventory-row span strong { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.inventory-row small { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; }
+
+@media (max-width: 720px) {
+  .analytics-panel { padding: 21px; }
+  .summary-grid { grid-template-columns: 1fr; }
+}
