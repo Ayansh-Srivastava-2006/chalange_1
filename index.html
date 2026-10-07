@@ -41,6 +41,14 @@
         </label>
         <button class="primary-button" type="submit">Search <span aria-hidden="true">↗</span></button>
       </form>
+      <div class="catalog-search" role="search">
+        <label for="product-search">Search the catalog</label>
+        <div class="search-input-wrap">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="product-search" type="search" autocomplete="off" placeholder="Search products, brands, or tags" aria-controls="search-suggestions" aria-expanded="false">
+        </div>
+        <div id="search-suggestions" class="search-suggestions" role="listbox" aria-label="Product suggestions" hidden></div>
+      </div>
       <div class="range-divider"><span>or search a price range</span></div>
       <form id="range-form" class="range-form">
         <label><span>Minimum</span><input id="min-price" type="number" min="1" value="50000" inputmode="numeric" required></label>
@@ -49,31 +57,6 @@
         <button class="secondary-button" type="submit">Find in this range</button>
       </form>
       <p id="form-message" class="form-message" role="status"></p>
-    </section>
-
-    <section class="analytics-panel" aria-labelledby="analytics-title">
-      <div class="panel-heading">
-        <div>
-          <p class="eyebrow">02 / Inventory intelligence</p>
-          <h2 id="analytics-title">Measure inventory in a price range</h2>
-        </div>
-        <span class="method-note">Prefix totals</span>
-      </div>
-      <form id="analytics-form" class="range-form analytics-form">
-        <label><span>Minimum price</span><input id="analytics-min" type="number" min="1" value="5000" inputmode="numeric" required></label>
-        <span class="range-dash" aria-hidden="true">—</span>
-        <label><span>Maximum price</span><input id="analytics-max" type="number" min="1" value="20000" inputmode="numeric" required></label>
-        <button class="secondary-button" type="submit">Analyze inventory</button>
-      </form>
-      <p id="analytics-message" class="form-message" role="status"></p>
-      <div class="summary-grid" aria-live="polite">
-        <article class="summary-card"><span>Matching products</span><strong id="inventory-count">0</strong></article>
-        <article class="summary-card summary-card-accent"><span>Total inventory value</span><strong id="inventory-value">₹0</strong></article>
-      </div>
-      <div class="inventory-list-wrap">
-        <div class="list-heading"><h3>Matching product list</h3><span id="inventory-meta"></span></div>
-        <div id="inventory-list" class="inventory-list"></div>
-      </div>
     </section>
 
     <section class="results-section" aria-labelledby="results-title">
@@ -101,6 +84,7 @@
   </dialog>
   <script src="../data.js"></script>
   <script src="app.js"></script>
+  <script src="product-search.js"></script>
   <script src="recently-viewed.js"></script>
 </body>
 </html>
